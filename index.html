@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwinPane — Dual-Pane Power File Manager for macOS</title>
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-hover: #1D4ED8;
+            --bg: #0B0F19;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #F3F4F6;
+            --muted: #9CA3AF;
+            --tag-bg: rgba(37, 99, 235, 0.15);
+            --tag-text: #60A5FA;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #2563EB;
+                --primary-hover: #1D4ED8;
+                --bg: #F8FAFC;
+                --card-bg: #FFFFFF;
+                --border: #E2E8F0;
+                --text: #0F172A;
+                --muted: #64748B;
+                --tag-bg: #EFF6FF;
+                --tag-text: #1D4ED8;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 60px 20px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .hero { text-align: center; margin-bottom: 64px; }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+            margin-bottom: 24px;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 46px; font-weight: 850; letter-spacing: -1px; line-height: 1.15; margin-bottom: 16px; }
+        .hero-desc { font-size: 21px; color: var(--muted); max-width: 720px; margin: 0 auto 32px; line-height: 1.5; }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: white;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+            transition: transform 0.15s, background 0.15s;
+        }
+        .cta-btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .feature-icon { font-size: 34px; margin-bottom: 14px; }
+        .feature-title { font-size: 19px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+        .feature-desc { font-size: 15px; color: var(--muted); line-height: 1.5; }
+        .specs-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 64px;
+        }
+        .specs-card h2 { font-size: 24px; font-weight: 800; margin-bottom: 20px; }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .spec-item { font-size: 15px; }
+        .spec-label { color: var(--muted); margin-bottom: 4px; }
+        .spec-value { font-weight: 700; color: var(--text); }
+        footer {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            font-size: 15px;
+            color: var(--muted);
+        }
+        .footer-links { display: flex; justify-content: center; gap: 28px; margin-bottom: 16px; flex-wrap: wrap; }
+        .footer-links a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .footer-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <img src="app-icon.png" alt="TwinPane App Icon" class="app-icon">
+            <br>
+            <div class="badge">Classic Dual-Pane • Native Speed</div>
+            <h1>Next-Gen Dual-Pane File Manager for macOS</h1>
+            <p class="hero-desc">The legendary dual-pane workflow reborn for modern Mac power users. Uncompromising keyboard productivity, multi-tab browsing, and 100% offline privacy powered by Rust.</p>
+            <a href="https://apps.apple.com/app/twinpane/id6836887871" class="cta-btn">
+                 View on Mac App Store
+            </a>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Rust-Native Velocity</div>
+                <div class="feature-desc">Asynchronous multi-threaded directory indexing with instant streaming. Navigate folders with 100,000+ items without UI stutter.</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📑</div>
+                <div class="feature-title">Independent Dual Tabs</div>
+                <div class="feature-desc">Work with multiple open locations per panel. Pin essential workflows, switch tabs instantly, or synchronize dual viewports.</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⌨️</div>
+                <div class="feature-title">Classic F-Key Controls</div>
+                <div class="feature-desc">Total Commander style productivity: F3 View, F4 Edit, F5 Copy, F6 Move, F7 New Folder, F8 Delete, and Tab to switch panes.</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🗜️</div>
+                <div class="feature-title">Built-in Archive Tools</div>
+                <div class="feature-desc">Create and extract ZIP, TAR, and GZ archives directly between left and right panes without leaving the application.</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">12 Languages Built-in</div>
+                <div class="feature-desc">Fully localized into English, Hungarian, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Japanese, Korean, and Chinese.</div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">100% Offline & Sandboxed</div>
+                <div class="feature-desc">Zero telemetry, zero internet requirements, zero analytics. Fully conforms to Apple App Sandbox security guidelines.</div>
+            </div>
+        </div>
+
+        <div class="specs-card">
+            <h2>Technical Specifications</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Platform</div>
+                    <div class="spec-value">macOS 11.0 (Big Sur) or newer</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Architecture</div>
+                    <div class="spec-value">Universal (Apple Silicon & Intel)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Security</div>
+                    <div class="spec-value">macOS App Sandbox & Hardened Runtime</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Data Collection</div>
+                    <div class="spec-value">0% — Data Not Collected</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="support.html">Support & Help</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:vargamark@icloud.com">Developer Contact</a>
+            </div>
+            <p>© 2026 Mark Varga • TwinPane. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

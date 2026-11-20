@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwinPane — Customer Support & Help Center</title>
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-hover: #1D4ED8;
+            --bg: #0B0F19;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #F3F4F6;
+            --muted: #9CA3AF;
+            --tag-bg: rgba(37, 99, 235, 0.15);
+            --tag-text: #60A5FA;
+            --faq-bg: rgba(255, 255, 255, 0.03);
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #2563EB;
+                --primary-hover: #1D4ED8;
+                --bg: #F8FAFC;
+                --card-bg: #FFFFFF;
+                --border: #E2E8F0;
+                --text: #0F172A;
+                --muted: #64748B;
+                --tag-bg: #EFF6FF;
+                --tag-text: #1D4ED8;
+                --faq-bg: #F1F5F9;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 48px 20px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 780px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; }
+        .badge {
+            display: inline-block;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 40px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .subtitle { font-size: 18px; color: var(--muted); }
+        .contact-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 48px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .contact-box h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+        .contact-box p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background 0.2s;
+            box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+        }
+        .contact-btn:hover { background: var(--primary-hover); }
+        .faq-section { margin-bottom: 48px; }
+        .faq-section h2 { font-size: 26px; font-weight: 800; margin-bottom: 24px; text-align: center; }
+        .faq-item {
+            background: var(--faq-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 16px;
+        }
+        .faq-q { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .faq-a { font-size: 16px; color: var(--muted); margin: 0; line-height: 1.6; }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .nav-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+        .nav-links a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .nav-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">Help Center</div>
+            <h1>TwinPane Support</h1>
+            <p class="subtitle">Have a question, feature suggestion, or need help with TwinPane? We are here to assist you.</p>
+        </header>
+
+        <div class="contact-box">
+            <h2>Direct Developer Support</h2>
+            <p>Inquiries are typically answered within 24 hours.</p>
+            <a href="mailto:vargamark@icloud.com?subject=TwinPane%20Customer%20Support" class="contact-btn">
+                ✉️ Contact Developer (vargamark@icloud.com)
+            </a>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-q"><span>⌨️</span> What are the standard keyboard shortcuts in TwinPane?</div>
+                <p class="faq-a">TwinPane adheres to the classic dual-pane standard: <b>Tab</b> switches active panes; <b>F3</b> views file preview; <b>F4</b> opens in text editor; <b>F5</b> copies to destination pane; <b>F6</b> moves to destination pane; <b>F7</b> creates a new folder; <b>F8</b> deletes; and <b>Cmd + T</b> opens a new tab.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q"><span>🔒</span> How does macOS permissions / App Sandbox work?</div>
+                <p class="faq-a">TwinPane runs securely inside Apple's App Sandbox. When accessing custom external drives or special system folders for the first time, macOS will present a standard system confirmation dialog to grant read/write access.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q"><span>🌐</span> How do I change the interface language?</div>
+                <p class="faq-a">You can switch languages at any time by clicking the globe icon (<code>🌐</code>) on the top toolbar or opening Settings. TwinPane includes 12 native translations.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q"><span>🛡️</span> Does TwinPane collect telemetry or send data over the network?</div>
+                <p class="faq-a">Absolutely not. TwinPane is completely offline. It contains no tracking pixels, analytics SDKs, advertising frameworks, or cloud dependencies. Your files and paths never leave your local Mac.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q"><span>💻</span> What are the minimum system requirements?</div>
+                <p class="faq-a">TwinPane runs on macOS 11.0 (Big Sur) or newer, natively compiled for both Apple Silicon (M1/M2/M3/M4) and Intel Macs.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <p>© 2026 Mark Varga • TwinPane. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

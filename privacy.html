@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwinPane — Privacy Policy</title>
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --bg: #0B0F19;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #F3F4F6;
+            --muted: #9CA3AF;
+            --tag-bg: rgba(37, 99, 235, 0.15);
+            --tag-text: #60A5FA;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #2563EB;
+                --bg: #F8FAFC;
+                --card-bg: #FFFFFF;
+                --border: #E2E8F0;
+                --text: #0F172A;
+                --muted: #64748B;
+                --tag-bg: #EFF6FF;
+                --tag-text: #1D4ED8;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 48px 20px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 780px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 48px; }
+        .badge {
+            display: inline-block;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 40px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .last-updated { font-size: 15px; color: var(--muted); }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 36px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .summary-card h2 { font-size: 20px; margin-bottom: 12px; color: var(--tag-text); }
+        .summary-card p { margin-bottom: 0; }
+        section { margin-bottom: 36px; }
+        h2 { font-size: 24px; font-weight: 700; margin-bottom: 14px; }
+        p { margin-bottom: 16px; color: var(--text); }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .nav-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">Zero Data Collection • 100% Offline</div>
+            <h1>Privacy Policy for TwinPane</h1>
+            <p class="last-updated">Effective Date: November 20, 2026</p>
+        </header>
+
+        <div class="summary-card">
+            <h2>🛡️ The TwinPane Privacy Guarantee</h2>
+            <p>TwinPane was built upon strict <b>Privacy by Design</b>. We do not collect, harvest, store, transmit, or monetize any of your personal data, keystrokes, directories, or files. TwinPane functions 100% locally on your computer.</p>
+        </div>
+
+        <section>
+            <h2>1. Information We Do NOT Collect</h2>
+            <p>TwinPane operates strictly on your Mac without remote connections. We do not collect:</p>
+            <ul>
+                <li><b>No Personal Data:</b> No user accounts, email addresses, names, or contact details.</li>
+                <li><b>No File Metadata or Contents:</b> Your paths, directory names, filenames, file sizes, and file data never leave your local device.</li>
+                <li><b>No Telemetry or Usage Tracking:</b> We do not monitor how often you open the app, which hotkeys you press, or what file operations you run.</li>
+                <li><b>No Identifiers or IP Addresses:</b> We do not log IP addresses, device identifiers, serial numbers, or advertising IDs.</li>
+                <li><b>No Third-Party Analytics:</b> There are zero analytics SDKs or monitoring tools integrated into the app.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Local File Management & Security</h2>
+            <p>When you browse, copy, move, rename, delete, or inspect files with TwinPane:</p>
+            <ul>
+                <li>All operations are executed strictly using native Rust and operating system APIs on your machine.</li>
+                <li>TwinPane operates strictly within the <b>macOS App Sandbox</b>, ensuring it only interacts with directories and files you explicitly authorize or access.</li>
+                <li>No network requests are generated by any file operations.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Third-Party Services & Network Access</h2>
+            <p>TwinPane contains <b>zero third-party trackers, zero advertising SDKs, and zero telemetry frameworks</b>. The application binary contains no background networking servers or reporting daemons.</p>
+        </section>
+
+        <section>
+            <h2>4. Children’s Privacy</h2>
+            <p>Because TwinPane does not collect or store any personal data whatsoever, it is fully safe for users of all ages, including children under 13.</p>
+        </section>
+
+        <section>
+            <h2>5. Changes to This Privacy Policy</h2>
+            <p>Any revisions to this Privacy Policy will be published on this page with a revised effective date. Our commitment to 100% offline data integrity and zero tracking will never change.</p>
+        </section>
+
+        <section>
+            <h2>6. Developer Contact</h2>
+            <p>If you have any questions or inquiries regarding this Privacy Policy, please contact the developer:</p>
+            <p><b>Developer:</b> Mark Varga<br>
+            <b>Email:</b> <a href="mailto:vargamark@icloud.com?subject=TwinPane%20Privacy%20Inquiry">vargamark@icloud.com</a><br>
+            <b>Website:</b> <a href="https://copyappsai.github.io/twinpane-legal/">https://copyappsai.github.io/twinpane-legal/</a></p>
+        </section>
+
+        <footer>
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="support.html">Support & Help</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <p>© 2026 Mark Varga • TwinPane. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
